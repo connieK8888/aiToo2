@@ -276,7 +276,7 @@
     }
 }
 
-.application {
+.app {
     padding: 80px 0;
     background-color: $white;
     border-radius: 20px;
@@ -356,7 +356,7 @@
         display: none;
     }
 
-    #select_filter:checked~.application_filter_group {
+    #select_filter:checked~.app_filter_group {
         display: block;
         z-index: 10;
     }
@@ -453,7 +453,7 @@
         z-index: 10;
     }
 
-    #sort:checked~.application_select_label .material-symbols-outlined {
+    #sort:checked~.app_select_label .material-symbols-outlined {
         transform: rotate(180deg);
     }
 

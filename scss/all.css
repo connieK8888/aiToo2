@@ -685,18 +685,18 @@ a {
   aspect-ratio: 1/1;
 }
 
-.application {
+.app {
   padding: 80px 0;
   background-color: white;
   border-radius: 20px;
 }
 @media screen and (min-width: 768px) {
-  .application {
+  .app {
     padding: 160px 0;
     border-radius: 160px;
   }
 }
-.application_title {
+.app_title {
   font-size: clamp(32px, 7.29166vw, 80px);
   color: #020202;
   font-weight: 900;
@@ -704,20 +704,20 @@ a {
   padding-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
-  .application_title {
+  .app_title {
     padding-bottom: 80px;
   }
 }
-.application_title span {
+.app_title span {
   display: block;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
-  .application_title span {
+  .app_title span {
     display: none;
   }
 }
-.application_search {
+.app_search {
   width: 100%;
   box-sizing: border-box;
   padding: 20px 40px 20px 64px;
@@ -726,10 +726,10 @@ a {
   border: none;
   border-radius: 16px;
 }
-.application .search_label {
+.app .search_label {
   position: relative;
 }
-.application .search_icon {
+.app .search_icon {
   position: absolute;
   top: 60%;
   left: 40px;
@@ -738,7 +738,7 @@ a {
   font-size: 16px;
   line-height: 1.5;
 }
-.application_select {
+.app_select {
   color: #020202;
   padding: 16px 0;
   display: flex;
@@ -747,32 +747,32 @@ a {
   justify-content: space-between;
 }
 @media screen and (min-width: 768px) {
-  .application_select {
+  .app_select {
     padding: 24px 0 40px;
   }
 }
-.application_select_option {
+.app_select_option {
   border: 1px solid #F2F2F2;
   cursor: pointer;
   border-radius: 16px;
   order: 1;
   position: relative;
 }
-.application #select_filter {
+.app #select_filter {
   display: none;
 }
-.application #select_filter:checked ~ .application_filter_group {
+.app #select_filter:checked ~ .app_filter_group {
   display: block;
   z-index: 10;
 }
-.application_select_filter {
+.app_select_filter {
   display: flex;
   align-items: center;
   gap: 12px;
   padding: 20px 40px;
   cursor: pointer;
 }
-.application_select_list {
+.app_select_list {
   display: flex;
   justify-content: start;
   flex-grow: 1;
@@ -783,23 +783,23 @@ a {
   overflow-x: auto;
 }
 @media screen and (min-width: 992px) {
-  .application_select_list {
+  .app_select_list {
     justify-content: center;
     padding-top: 0;
     order: 2;
   }
 }
-.application_select_item {
+.app_select_item {
   padding: 8px 16px;
   color: #919191;
   border-radius: 16px;
   cursor: pointer;
 }
-.application_select_item:hover {
+.app_select_item:hover {
   background-color: #F2F2F2;
   color: #020202;
 }
-.application_filter_group {
+.app_filter_group {
   position: absolute;
   top: 100%;
   left: 0;
@@ -812,47 +812,47 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: none;
 }
-.application .select_filter_list:first-child {
+.app .select_filter_list:first-child {
   border-bottom: 1px solid #F2F2F2;
 }
-.application .select_filter_list > li:first-child {
+.app .select_filter_list > li:first-child {
   font-size: 14px;
   color: #919191;
   cursor: text;
 }
-.application .select_filter_list > li {
+.app .select_filter_list > li {
   padding: 12px 24px;
 }
-.application .select_filter_list > li:nth-child(n+2):hover {
+.app .select_filter_list > li:nth-child(n+2):hover {
   background-color: #F2F2F2;
 }
-.application .active {
+.app .active {
   background-color: #F2F2F2;
   color: #020202;
 }
-.application_select_sort {
+.app_select_sort {
   order: 2;
   position: relative;
 }
 @media screen and (min-width: 992px) {
-  .application_select_sort {
+  .app_select_sort {
     order: 3;
   }
 }
-.application #sort {
+.app #sort {
   display: none;
 }
-.application #sort:checked ~ .sort_new_old {
+.app #sort:checked ~ .sort_new_old {
   display: block;
   z-index: 10;
 }
-.application #sort:checked ~ .application_select_label .material-symbols-outlined {
+.app #sort:checked ~ .app_select_label .material-symbols-outlined {
   transform: rotate(180deg);
 }
-.application .material-symbols-outlined {
+.app .material-symbols-outlined {
   transition: transform 0.3s ease;
 }
-.application_select_label {
+.app_select_label {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -862,7 +862,7 @@ a {
   color: #020202;
   cursor: pointer;
 }
-.application .sort_new_old {
+.app .sort_new_old {
   position: absolute;
   width: 100%;
   top: 100%;
@@ -875,112 +875,112 @@ a {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   display: none;
 }
-.application .sort_new_old p {
+.app .sort_new_old p {
   padding: 8px 0;
 }
-.application .sort_new_old p:hover {
+.app .sort_new_old p:hover {
   background-color: #ccc;
   cursor: pointer;
 }
-.application_card_list {
+.app_card_list {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
 }
 @media screen and (min-width: 576px) {
-  .application_card_list {
+  .app_card_list {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media screen and (min-width: 992px) {
-  .application_card_list {
+  .app_card_list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
   }
 }
-.application_card_link {
+.app_card_link {
   color: #020202;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
-.application_card_img {
+.app_card_img {
   overflow: hidden;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
-.application_card_item {
+.app_card_item {
   border: 1px solid #F2F2F2;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
 }
-.application_card_item img {
+.app_card_item img {
   width: 100%;
   height: auto;
   transition: 0.8s ease-in;
 }
-.application_card_item img:hover {
+.app_card_item img:hover {
   transform: scale(1.2);
 }
-.application_card_info {
+.app_card_info {
   padding: 20px 32px;
 }
-.application .grow {
+.app .grow {
   flex-grow: 1;
 }
-.application .title {
+.app .title {
   font-size: 20px;
   font-weight: 700;
   padding-bottom: 12px;
 }
-.application .text {
+.app .text {
   font-size: 14px;
 }
-.application .noData {
+.app .noData {
   color: #020202;
   font-size: 24px;
 }
-.application_card_class {
+.app_card_class {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #F2F2F2;
   border-bottom: 1px solid #F2F2F2;
 }
-.application .fw_bold {
+.app .fw_bold {
   font-weight: bold;
 }
-.application_card_category {
+.app_card_category {
   display: flex;
   justify-content: space-between;
 }
-.application .pagination {
+.app .pagination {
   display: flex;
   color: #020202;
   padding-top: 40px;
   justify-content: end;
   gap: 8px;
 }
-.application .page_item .material-symbols-outlined {
+.app .page_item .material-symbols-outlined {
   font-size: 14px;
   font-weight: 700;
 }
-.application .page_link {
+.app .page_link {
   font-size: 14px;
   font-weight: 700;
   padding: 16px 20px;
   color: #020202;
   border-radius: 16px;
 }
-.application .page_link:hover {
+.app .page_link:hover {
   background-color: #F2F2F2;
   color: #020202;
 }
-.application .show {
+.app .show {
   background-color: #020202;
   color: white;
 }
-.application .disabled {
+.app .disabled {
   pointer-events: none;
   cursor: default;
 }
