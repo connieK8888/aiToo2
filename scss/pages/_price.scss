@@ -1,0 +1,254 @@
+.banner {
+    &_heading {
+        font-size: clamp(28px, 4.6875vw, 48px);
+        text-align: right;
+        padding-bottom: 80px;
+
+        @media screen and (min-width:768px) {
+            padding-bottom: 58px;
+        }
+
+        span {
+            &:nth-child(even) {
+                display: none;
+            }
+
+            &:nth-child(odd) {
+                display: block;
+            }
+
+            @media screen and (min-width:768px) {
+                &:nth-child(even) {
+                    display: block;
+                }
+
+                &:nth-child(odd) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &_arrow_left {
+        text-align: left;
+    }
+}
+
+.price {
+    padding: 120px 0 60px;
+
+    @media screen and (min-width:768px) {
+        padding: 160px 0 80px;
+    }
+
+    &_title {
+        font-size: clamp(20px, 3.64583vw, 32px);
+    }
+
+    &_card_list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 240px);
+        gap: 12px;
+        padding: 24px 0 0 0;
+
+        @media screen and (min-width:768px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 318px);
+            gap: 24px;
+            padding: 80px 0 0 0;
+        }
+    }
+
+    &_card_item {
+        border: 1px solid #525252;
+        border-radius: 16px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_card_header {
+        flex: 1;
+    }
+
+    &_card_name {
+        padding: 20px;
+
+        @media screen and (min-width:768px) {
+            padding: 20px 32px;
+        }
+    }
+
+    &_card_name {
+        font-size: 32px;
+    }
+
+    &_card_level {
+        padding: 0 32px;
+
+        li {
+            text-indent: 24px;
+            line-height: 1.5;
+            position: relative;
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 8px;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 4px;
+                border-radius: 50%;
+                background-color: white;
+            }
+        }
+    }
+
+    &_card_info {
+        @include df();
+        border-top: 1px solid #525252;
+        padding: 20px;
+
+        @media screen and (min-width:768px) {
+            padding: 20px 32px;
+        }
+    }
+
+    .start {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.standard {
+    padding: 60px 0;
+
+    @media screen and (min-width:768px) {
+        padding: 80px 0;
+    }
+
+    &_content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+
+        @media screen and (min-width:768px) {
+            grid-template-columns: 1fr 2fr;
+            gap: 24px;
+        }
+    }
+
+    &_title {
+        font-size: clamp(20px, 3.64583vw, 32px);
+    }
+
+    &_text_title {
+        font-size: clamp(32px, 5.20833vw, 48px);
+        border-bottom: 1px solid #525252;
+        padding-top: 40px;
+
+        span {
+            display: block;
+            font-size: clamp(16px, 3.125vw, 32px);
+            padding: 24px 0 40px;
+        }
+    }
+
+    &_text_title:nth-child(1) {
+        @media screen and (min-width:768px) {
+            padding-top: 0;
+        }
+    }
+}
+
+.fqa {
+    padding: 120px 0;
+
+    @media screen and (min-width:768px) {
+        padding: 160px 0;
+    }
+
+    &_content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+
+        @media screen and (min-width:768px) {
+            grid-template-columns: 1fr 2fr;
+            gap: 24px;
+        }
+    }
+
+    &_title {
+        font-size: clamp(20px, 3.64583vw, 32px);
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+
+    &_tab {
+        border: 1px solid #525252;
+        padding: 20px 20px 20px 64px;
+        border-radius: 16px;
+        cursor: pointer;
+
+        @media screen and (min-width:768px) {
+            padding: 20px 40px 20px 84px;
+        }
+
+    }
+
+    input {
+        display: none;
+
+        &:checked~label::before {
+            content: '-';
+            position: absolute;
+            display: block;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -20px;
+            font-size: 20px;
+        }
+
+        &:checked~.fqa_tab_content {
+            max-height: 100vh;
+            padding-top: 8px;
+        }
+    }
+
+    label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        position: relative;
+
+        h3 {
+            font-size: 20px;
+            position: relative;
+        }
+
+        &::before {
+            content: '+';
+            position: absolute;
+            display: block;
+            left: -24px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+        }
+    }
+
+    &_tab_content {
+        max-height: 0;
+        transition: 0.8s;
+        overflow: hidden;
+    }
+}

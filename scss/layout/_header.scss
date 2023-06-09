@@ -1,0 +1,179 @@
+.header {
+    &_content {
+        padding: 20px 0;
+        @include df();
+        position: relative;
+        border-bottom: 1px solid $white;
+    }
+
+    &_heading {
+        &_link {
+            display: block;
+            background-image: url(../image/logo.png);
+            background-size: cover;
+            width: 147px;
+            height: 24px;
+            text-indent: 101%;
+            overflow: hidden;
+            white-space: nowrap;
+            float: left;
+
+            @media screen and (min-width:768px) {
+                width: 245px;
+                height: 40px;
+            }
+        }
+    }
+
+    #menu_switch {
+        display: none;
+    }
+
+    #menu_switch:checked~.container .header_content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: calc(100% - 24px);
+        padding: 20px $spaceBase;
+        z-index: 24;
+        background-color: $black;
+    }
+
+    #menu_switch:checked~.container .header_nav {
+        display: flex;
+        width: calc(100% - 24px);
+        padding: 0 12px;
+    }
+
+    #menu_switch:checked~.container .line:nth-child(1) {
+        transform: rotate(45deg);
+        transition: bottom 0.5s, transform 0.5s 0.5s;
+    }
+
+    #menu_switch:checked~.container .line:nth-child(2) {
+        opacity: 0;
+        transition: 0.5s;
+    }
+
+    #menu_switch:checked~.container .line:nth-child(3) {
+        transform: rotate(-45deg);
+        transition: top 0.5s, transform 0.5s 0.5s;
+    }
+
+    &_nav {
+        position: fixed;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 80px);
+        font-weight: 700;
+        @include column();
+        flex-grow: 1;
+        display: none;
+        background-color: $black;
+        z-index: 13;
+
+        @media screen and (min-width:768px) {
+            @include df();
+            gap: 20px;
+            position: relative;
+            top: auto;
+            left: auto;
+            height: auto;
+            width: fit-content;
+        }
+
+        &_link {
+            display: block;
+            font-size: 80px;
+            line-height: 96px;
+
+            @media screen and (min-width:768px) {
+                font-size: 16px;
+                line-height: 1.5;
+                padding: 8px 16px;
+            }
+
+            &:hover {
+                background-color: $white;
+                color: $black;
+            }
+        }
+
+        &_box {
+            width: 100%;
+            margin-top: auto;
+            text-align: center;
+
+            @media screen and (min-width:768px) {
+                display: flex;
+                justify-content: end;
+                gap: 20px;
+            }
+        }
+
+        &_footer {
+            border-top: 1px solid white;
+            padding: 20px 0;
+            margin-top: auto;
+            width: 100%;
+
+            @media screen and (min-width:768px) {
+                display: none;
+            }
+
+            &_copyright {
+                padding: $spaceBase 0;
+            }
+
+            a {
+                display: inline-block;
+                padding: $spaceBase 20px $spaceBase 0;
+
+                &:hover {
+                    background-color: $white;
+                    color: $black;
+                }
+            }
+        }
+    }
+
+    &_nav_mobile {
+        width: 40px;
+        aspect-ratio: 1/1;
+        @include column();
+        justify-content: center;
+        position: relative;
+        cursor: pointer;
+
+        @media screen and (min-width:768px) {
+            display: none;
+        }
+
+        .line {
+            width: 28px;
+            height: 2px;
+            background-color: #ffffff;
+            border-radius: 4px;
+            position: absolute;
+            inset: 0;
+            margin: auto;
+
+            &:nth-child(1) {
+                transform: translateY(-12px);
+                transition: bottom 0.5s 0.5s, transform 0.5s;
+            }
+
+            &:nth-child(2) {
+                top: 0;
+                bottom: 0;
+                transition: 0.5s 0.5s;
+            }
+
+            &:nth-child(3) {
+                transform: translateY(12px);
+                transition: top 0.5s 0.5s, transform 0.5s;
+            }
+        }
+    }
+}

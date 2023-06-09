@@ -1,0 +1,99 @@
+.footer {
+    &_header {
+        padding: 80px 0;
+        border-top: 1px solid #919191;
+        border-bottom: 1px solid #919191;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+
+        @media screen and (min-width:576px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &_nav {
+        order: 2;
+        padding-top: 16px;
+
+        @media screen and (min-width:576px) {
+            order: 1;
+            padding-top: 0;
+        }
+    }
+
+    &_logo {
+        order: 1;
+
+        @media screen and (min-width:576px) {
+            order: 2;
+        }
+    }
+
+    &_nav_link {
+        font-size: clamp(48px, 8.33333vw, 80px);
+        display: block;
+    }
+
+    &_link {
+        display: block;
+        text-align: start;
+
+        @media screen and (min-width:992px) {
+            text-align: end;
+        }
+    }
+
+    &_logo_img {
+        width: 245px;
+        height: 40px;
+        vertical-align: top;
+        object-fit: cover;
+
+    }
+
+    &_copyright {
+        @include df();
+        flex-wrap: wrap;
+        padding: 32px 0 0 0;
+
+        @media screen and (min-width:576px) {
+            padding: 12px 0;
+        }
+    }
+
+    &_social {
+        flex: 1;
+        display: flex;
+        gap: 20px;
+        padding-left: 0;
+        order: 1;
+
+        @media screen and (min-width:576px) {
+            padding-left: 40px;
+            order: 0;
+        }
+
+        @media screen and (min-width:768px) {
+            padding-left: 100px;
+        }
+    }
+
+
+    &_social_link {
+        padding: 24px 8px 24px 0;
+
+        @media screen and (min-width:768px) {
+            padding: 12px 24px;
+        }
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
+
+    .to_top {
+        @include df()
+    }
+}

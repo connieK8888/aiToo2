@@ -1,0 +1,14 @@
+@import '../scss/base/reset';
+@import '../scss/base/base';
+
+
+@import '../scss/utils/variables';
+@import '../scss/utils/mixins';
+
+@import '../scss/layout/grid';
+@import '../scss/layout/header';
+@import '../scss/layout/footer';
+
+
+@import '../scss/pages/index';
+@import '../scss/pages/price';

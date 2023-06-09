@@ -1,0 +1,23 @@
+@mixin df() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@mixin btn() {
+    border: 1px solid $white;
+    background-color: $black;
+    color: $white;
+    padding: 20px 40px;
+    border-radius: 16px;
+    font-size: 20px;
+    display: inline-block;
+    line-height: 24px;
+}
+
+@mixin column() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
